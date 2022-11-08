@@ -6,6 +6,6 @@ namespace msSoft.GBATools
     public class GraphicsData : ScriptableObject
     {
         public string filename;
-        public ImagesCollection[] imagesCollections;
+        public ImageSet[] imageSets;
     }
 }

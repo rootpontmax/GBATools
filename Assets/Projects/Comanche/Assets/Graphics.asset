@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Graphics
   m_EditorClassIdentifier: 
   filename: Graphics
-  imagesCollections:
+  imageSets:
   - {fileID: 11400000, guid: 046c2a07b3eac40e8903516c6f8afa7a, type: 2}
+  - {fileID: 11400000, guid: 0e0a38213e6784ff38cf5775cbe0f54f, type: 2}

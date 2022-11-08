@@ -3,8 +3,8 @@ using UnityEngine;
 
 namespace msSoft.GBATools
 {
-    [CreateAssetMenu(menuName = "GBATools/Assets/Images Collection")]
-    public class ImagesCollection : ScriptableObject
+    [CreateAssetMenu(menuName = "GBATools/Assets/Image Set")]
+    public class ImageSet : ScriptableObject
     {
         [Serializable]
         public class Image
@@ -16,9 +16,13 @@ namespace msSoft.GBATools
             }
             public string variableName;
             public Texture2D image;
+            [HideInInspector] public byte[] compressedImage;
             public Type type;
         }
 
+        public string paletteName;
         public Image[] images;
+
+        [HideInInspector] public byte[] palette;
     }
 }

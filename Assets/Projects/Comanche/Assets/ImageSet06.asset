@@ -10,15 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d6dcd35c3d8d94af2922e23a18eff5d3, type: 3}
-  m_Name: Images
+  m_Name: ImageSet06
   m_EditorClassIdentifier: 
+  paletteName: g_palette02
   images:
-  - variableName: g_mapColor01
-    image: {fileID: 2800000, guid: 0d936bb71f1b24c13a0f2696dcfbecad, type: 3}
+  - variableName: g_mapColor06
+    image: {fileID: 2800000, guid: e05f0657c89224d79acc272bd31e8a8d, type: 3}
+    compressedImage: 
     type: 0
-  - variableName: g_mapColor02
-    image: {fileID: 2800000, guid: 60b879b99466d4a7388306a33bec1809, type: 3}
-    type: 0
-  - variableName: g_mapHeight01
-    image: {fileID: 2800000, guid: d069998e6e45f4ba88f4eaee7d00990c, type: 3}
+  - variableName: g_mapHeight06
+    image: {fileID: 2800000, guid: d4806036bc1214ab7ba2473d321d8bac, type: 3}
+    compressedImage: 
     type: 1
+  palette: 
