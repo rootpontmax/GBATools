@@ -44,7 +44,10 @@ namespace msSoft.GBATools.Editor
                 byte r = set.palette[id    ];
                 byte g = set.palette[id + 1];
                 byte b = set.palette[id + 2];
-                colors[i] = new Color32(r, g, b, 255);
+                int x = i % 16;
+                int y = 15 - i / 16;
+                int pixelOffset = y * 16 + x;
+                colors[pixelOffset] = new Color32(r, g, b, 255);
             }
 
 

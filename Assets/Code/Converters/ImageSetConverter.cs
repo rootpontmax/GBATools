@@ -77,6 +77,15 @@ namespace msSoft.GBATools
                 set.palette[id + 1] = palette.colors[i].g;
                 set.palette[id + 2] = palette.colors[i].b;
             }
+
+            // Fill remaining palette with magenta
+            for( int i = palette.colors.Count; i < 256; ++i )
+            {
+                int id = i * 3;
+                set.palette[id    ] = 255;
+                set.palette[id + 1] = 0;
+                set.palette[id + 2] = 255;
+            }
         }
 
         private static void SaveData(ImageSet.Image image, ImageRawData data, Palette palette)
