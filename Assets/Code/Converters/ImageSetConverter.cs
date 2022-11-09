@@ -46,6 +46,7 @@ namespace msSoft.GBATools
 
             // Iteration sorting
             Palette palette = new Palette();
+            palette.set.Add(new ColorRGB(255,0,255));
             SortColorList(colorList, palette, 0, colorList.Count, MEDIAN_CUT_ITERATION_COUNT);
 
             // Sort palette and finalize it

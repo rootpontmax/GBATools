@@ -35,7 +35,6 @@ namespace msSoft.GBATools.Editor
         {
             if( null == set || null == set.palette )
                 return null;
-
             
             Color32[] colors = new Color32[256];
             for( int i = 0; i < 256; ++i )
@@ -49,7 +48,6 @@ namespace msSoft.GBATools.Editor
                 int pixelOffset = y * 16 + x;
                 colors[pixelOffset] = new Color32(r, g, b, 255);
             }
-
 
             Texture2D texture = new Texture2D(16, 16, TextureFormat.RGB24, false);
             texture.filterMode = FilterMode.Point;

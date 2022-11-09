@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 namespace msSoft.GBATools.Editor
 {
@@ -40,6 +39,16 @@ namespace msSoft.GBATools.Editor
                 CreateEditorData(_graphicsData);
             }
 
+            if( GUILayout.Button("Export") )
+            {
+                string path = EditorUtility.OpenFolderPanel("Choose folder to save template", "", "");
+                if( !string.IsNullOrEmpty(path) )
+                {
+                    GraphicsDataExporter.Export(path, _graphicsData);
+                    AssetDatabase.SaveAssets();
+                    CreateEditorData(_graphicsData);
+                }
+            }
 
             DrawImageSets();
 
