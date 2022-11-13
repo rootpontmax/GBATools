@@ -13,8 +13,7 @@ namespace msSoft.GBATools
 
             
 
-            //string path = EditorUtility.OpenFolderPanel("Choose folder to save template", "", "");
-            //string fullPath = path + "/" + data.filename + ".h";
+            
             //Debug.LogError(fullPath);
             
             //TextAsset textAsset = 

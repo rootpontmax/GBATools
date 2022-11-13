@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00e1ddbc8536143b4a72838e5ea741be, type: 3}
   m_Name: Graphics
   m_EditorClassIdentifier: 
-  filename: Graphics
+  filename: VoxelGraphics
   imageSets:
   - {fileID: 11400000, guid: 046c2a07b3eac40e8903516c6f8afa7a, type: 2}
-  - {fileID: 11400000, guid: 0e0a38213e6784ff38cf5775cbe0f54f, type: 2}

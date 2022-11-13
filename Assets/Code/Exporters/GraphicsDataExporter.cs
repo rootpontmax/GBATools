@@ -36,6 +36,7 @@ namespace msSoft.GBATools
             string defineName = name.ToUpper() + "_INCLUDED";
             builderH.AppendLine("#ifndef " + defineName);
             builderH.AppendLine("#define " + defineName);
+            builderH.AppendLine("\n#include <stdint.h>\n");
             builderC.AppendLine("#include \"" + name + ".h\"");
         }
 
@@ -93,7 +94,7 @@ namespace msSoft.GBATools
             builderH.AppendLine(DEFINE_TYPE + image.variableName + "_SIZE_X " + sizeX);
             builderH.AppendLine(DEFINE_TYPE + image.variableName + "_SIZE_Y " + sizeY);
             builderH.AppendLine(DEFINE_TYPE + image.variableName + "_SIZE " + count);
-            builderH.AppendLine(IMAGE_TYPE + image.variableName + "[" + count + "];");
+            builderH.AppendLine(EXTERN_TYPE + IMAGE_TYPE + image.variableName + "[" + count + "];");
             builderC.AppendLine(IMAGE_TYPE + image.variableName + "[" + count + "] =");
             builderC.Append("{");
 
@@ -121,8 +122,8 @@ namespace msSoft.GBATools
 
 
         private static readonly string EXTERN_TYPE = "extern ";
-        private static readonly string PALETTE_TYPE = "static const uint16_t ";
-        private static readonly string IMAGE_TYPE = "static const uint8_t ";
+        private static readonly string PALETTE_TYPE = "const uint16_t ";
+        private static readonly string IMAGE_TYPE = "const uint8_t ";
         private static readonly string DEFINE_TYPE = "#define ";
 
 
