@@ -24,8 +24,8 @@ namespace msSoft.GBATools
                     ExportImageSet(builderH, builderC, data.imageSets[i]);
 
             // Close preprocessor and save
-            WriteSeparator(builderH);
-            WriteSeparator(builderC);
+            ExportTools.WriteSeparator(builderH);
+            ExportTools.WriteSeparator(builderC);
             builderH.AppendLine("#endif");
             File.WriteAllText(filenameH, builderH.ToString());
             File.WriteAllText(filenameC, builderC.ToString());
@@ -52,8 +52,8 @@ namespace msSoft.GBATools
 
         private static void WritePalette(StringBuilder builderH, StringBuilder builderC, ImageSet set)
         {
-            WriteSeparator(builderH);
-            WriteSeparator(builderC);
+            ExportTools.WriteSeparator(builderH);
+            ExportTools.WriteSeparator(builderC);
             builderH.AppendLine(EXTERN_TYPE + PALETTE_TYPE + set.paletteName + "[256];");
             builderC.AppendLine(PALETTE_TYPE + set.paletteName + "[256] =");
             builderC.Append("{");
@@ -84,8 +84,8 @@ namespace msSoft.GBATools
 
         private static void WriteImage(StringBuilder builderH, StringBuilder builderC, ImageSet.Image image)
         {
-            WriteSeparator(builderH);
-            WriteSeparator(builderC);
+            ExportTools.WriteSeparator(builderH);
+            ExportTools.WriteSeparator(builderC);
 
             int sizeX = image.image.width;
             int sizeY = image.image.height;
@@ -113,12 +113,7 @@ namespace msSoft.GBATools
             builderC.AppendLine("};");
         }
 
-        private static void WriteSeparator(StringBuilder builder)
-        {
-            for( int i = 0; i < 100; ++i )
-                builder.Append("/");
-            builder.Append("\n");
-        }
+        
 
 
         private static readonly string EXTERN_TYPE = "extern ";
